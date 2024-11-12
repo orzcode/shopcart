@@ -7,12 +7,22 @@ nav {
   flex-shrink: 0;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
+  gap: 2rem;
+  padding-right: 1rem;
+}
+.navLink{
+  padding: 0.4rem 3.5rem;
+  font-size: clamp(1.5rem, 2vw, 3rem);
+  background-color: var(--highlight);
+  border-radius: 5px;
+  color: whitesmoke
 }
 header {
-  background-color: var(--header);
+  background-color: rgb(244, 246, 247);
   background-image: url(./assets/candyheader.jpg);
+  background-repeat: no-repeat;;
   border-bottom: 1px solid black;
   /* filter: drop-shadow(1px 1px 100px black); */
   width: 100%;
@@ -28,7 +38,11 @@ header {
 }
 h1 {
   filter: drop-shadow(1px 1px 1px black);
-  font-size: clamp(3.3rem, 5vw, 4.5rem);
+  font-size: clamp(2.8rem, 4vw, 4.5rem);
+  background-color: var(--highlight);
+padding: 1rem 2rem;
+border-radius: 5px;
+border: 2px solid black;
 }
 main {
   background-color: var(--main);

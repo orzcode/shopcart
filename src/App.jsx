@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Outlet, Link } from 'react-router-dom'
 
-import './App.module.css'
+import styles from './App.module.css'
 
 
 function App() {
@@ -11,9 +11,9 @@ function App() {
     //#root
     <>
       <nav>
-        <Link to="/">About</Link>
-        <Link to="/shop">Shop</Link>
-        <Link to="/cart">Cart</Link>
+        <Link className={styles.navLink} to="/">About</Link>
+        <Link className={styles.navLink} to="/shop">Shop</Link>
+        <Link className={styles.navLink} to="/cart">Cart</Link>
       </nav>
       <header>
         <h1>ShopCart App - I'm wrapped in a div, "header"</h1>

@@ -13,6 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   --header: #22334b;
+  --highlight: #293d5a;
   --main: #2e2b2d;
   /* --highlighted: #22334B; */
 }
@@ -43,9 +44,9 @@ a {
 a:link, a:visited {
   text-decoration: none;
 }
-a:-webkit-any-link {
-  color: inherit;
-}
+/* a:-webkit-any-link {
+  color: unset;
+} */
 button {
   border-radius: 1rem;
   outline: 1px solid black;
