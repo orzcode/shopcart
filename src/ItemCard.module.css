@@ -1,0 +1,32 @@
+.Card {
+	display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: space-evenly;
+	  border-radius: 1rem;
+	  border: 2px solid black;
+	  cursor: pointer;
+	  width: clamp(280px, 35vw, 360px);
+	  height: clamp(340px, calc(240px + 20vw), 460px);
+	  text-align: center;
+	  background-color: var(--header);
+  }
+
+.QuantityInput {
+    display: inline-flex;
+    align-items: center;
+}
+
+.Arrow {
+    background-color: #ddd;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.Quantity {
+    width: 50px;
+    text-align: center;
+    font-size: 1rem;
+}

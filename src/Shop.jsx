@@ -1,11 +1,16 @@
 import { useState } from 'react'
+import ItemCard from './ItemCard'
+
+import styles from './Shop.module.css'
 
 function Shop() {
-	const [count, setCount] = useState(0)
 
 	return (
-		<div>
-			<h1>Shop</h1>
+		<div className={styles.Shop}>
+		<h2>Shop</h2>
+		<div className={styles.ShopCards}>
+		<ItemCard />
+		</div>
 		</div>
 	)
 }

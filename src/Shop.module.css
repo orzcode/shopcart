@@ -1,0 +1,19 @@
+.Shop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.ShopCards {
+display: grid;
+grid-template-columns: repeat(
+  auto-fit,
+  minmax(calc(28rem + 3vw), 1fr)
+);
+gap: 4rem 0rem;
+padding: 2rem 0;
+align-items: center;
+justify-items: center;
+}
