@@ -1,21 +1,35 @@
 import { useState } from "react";
+import useFakeAPI from "./FakeStoreAPI";
 import styles from "./ItemCard.module.css";
+
+// {
+//   "id": 9,
+//   "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
+//   "price": 64,
+//   "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
+//   "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+// }
 
 function ItemCard(props) {
   const [quantity, setQuantity] = useState(1);
+  const { fakeItem, error, loading } = useFakeAPI();
 
   const changeQuantity = (step) => {
     setQuantity((prevQuantity) => Math.max(1, prevQuantity + step));
   };
 
+  
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>A network error was encountered</p>;
+
   return (
     <div className={styles.Card}>
       <img
-        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=340&q=460"
-        alt="Candy"
+        src={fakeItem.image}
+        alt={fakeItem.description}
       />
-      <p>Item Name</p>
-      <p>$600</p>
+      <p>{fakeItem.title}</p>
+      <p>${fakeItem.price}</p>
       <div className={styles.QuantityInput}>
         <button className={styles.Arrow} onClick={() => changeQuantity(-1)}>
           &#9664;

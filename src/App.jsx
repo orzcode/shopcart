@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import { Outlet, Link } from 'react-router-dom'
 
-import styles from './App.module.css'
+// fetch('https://fakestoreapi.com/products/category/electronics')
+//             .then(res=>res.json())
+//             .then(json=>console.log(json))
 
+import styles from './App.module.css'
 
 function App() {
   const [count, setCount] = useState(0)
