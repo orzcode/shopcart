@@ -6,8 +6,8 @@
 	  border-radius: 1rem;
 	  border: 2px solid black;
 	  cursor: pointer;
-	  width: clamp(280px, 35vw, 360px);
-	  height: clamp(340px, calc(240px + 20vw), 460px);
+	  width: clamp(280px, 35vw, 380px);
+	  height: clamp(420px, calc(280px + 20vw), 680px);
 	  text-align: center;
 	  background-color: var(--header);
   }
@@ -29,4 +29,16 @@
     width: 50px;
     text-align: center;
     font-size: 1rem;
+}
+
+.CardImage {
+	max-width: 100%;
+	height: auto;
+	max-height: 50%;
+	object-fit: contain;
+
+	outline: 2px solid black;
+	border-radius: 1rem;
+
+	
 }

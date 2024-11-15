@@ -25,6 +25,7 @@ function ItemCard(props) {
   return (
     <div className={styles.Card}>
       <img
+        className={styles.CardImage}
         src={fakeItem.image}
         alt={fakeItem.description}
       />

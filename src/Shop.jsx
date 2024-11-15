@@ -10,6 +10,8 @@ function Shop() {
 		<h2>Shop</h2>
 		<div className={styles.ShopCards}>
 		<ItemCard />
+		<ItemCard />
+
 		</div>
 		</div>
 	)
