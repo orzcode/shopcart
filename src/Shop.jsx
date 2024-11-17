@@ -11,6 +11,7 @@ function Shop() {
 		<div className={styles.ShopCards}>
 		<ItemCard />
 		<ItemCard />
+		
 
 		</div>
 		</div>

@@ -14,20 +14,23 @@ function ItemCard(props) {
   const [quantity, setQuantity] = useState(1);
   const { fakeItem, error, loading } = useFakeAPI();
 
+  const placeholderImage = "https://placehold.co/400";
+
   const changeQuantity = (step) => {
     setQuantity((prevQuantity) => Math.max(1, prevQuantity + step));
   };
 
   
-  if (loading) return <p>Loading...</p>;
+  if (loading || !fakeItem) return <p>Loading...</p>;
   if (error) return <p>A network error was encountered</p>;
 
   return (
     <div className={styles.Card}>
       <img
         className={styles.CardImage}
-        src={fakeItem.image}
+        src={fakeItem.image || placeholderImage}
         alt={fakeItem.description}
+        loading="lazy"
       />
       <p>{fakeItem.title}</p>
       <p>${fakeItem.price}</p>
