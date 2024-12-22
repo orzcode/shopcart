@@ -11,7 +11,7 @@ function About() {
 		The items are processed by 'fakestore API' and don't exist!</p>
 		<p>Happy 'shopping'!</p>
 
-		<Link className={appStyles.navLink} to="shop">Hit up the goods!</Link>
+		<Link className={`${appStyles.navLink} ${aboutStyles.extraNavStyles}`} to="shop">Hit up the goods!</Link>
 
 		</div>
 	)
