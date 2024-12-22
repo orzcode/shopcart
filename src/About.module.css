@@ -1,4 +1,12 @@
+.aboutBox {
+	max-width: 75%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	min-height: 42rem;
+}
 .fuck {
-	background-color: pink;
-	color: red;
+	
+	
 }
