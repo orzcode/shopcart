@@ -1,9 +1,16 @@
 import { useState } from "react";
+import { useOutletContext } from 'react-router-dom';
 import styles from "./ItemCard.module.css";
 
 
 function ItemCard({ item }) {
+  const { cart, setCart } = useOutletContext();
   const [quantity, setQuantity] = useState(1);
+
+
+  const addToCart = (item) => {
+    setCart((prevCart) => [...prevCart, { ...item, quantity }]);
+  };
 
   const placeholderImage = "https://placehold.co/400";
 
@@ -38,7 +45,7 @@ function ItemCard({ item }) {
           &#9654;
         </button>
       </div>
-	  <button>Add to Cart</button>
+	  <button onClick={() => addToCart(item)}>Add to Cart</button>
     </div>
   );
 }

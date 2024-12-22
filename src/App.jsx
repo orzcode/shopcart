@@ -4,7 +4,7 @@ import { Outlet, Link } from 'react-router-dom'
 import styles from './App.module.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [cart, setCart] = useState([]);
 
   return (
     //#root
@@ -18,7 +18,7 @@ function App() {
         <h1>ShopCart App - I'm wrapped in a div, "header"</h1>
       </header>
       <main>
-        <Outlet /> {/* The current route content will render here */}
+        <Outlet context={{ cart, setCart }} /> {/* The current route content will render here */}
       </main>
       <footer>Created by Orz <a href='https://github.com/orzcode' target='_blank'><i className='fa-brands fa-github'></i></a>
       </footer>
