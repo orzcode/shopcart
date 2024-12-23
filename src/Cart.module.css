@@ -1,0 +1,38 @@
+.cartBox {
+	width: 90vw;
+}
+table {
+	font-size: clamp(1.5rem, 2vw, 3rem);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: space-between;
+}
+tr {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.totalCost{
+	display: flex;
+	flex-direction: column;
+	min-width: fit-content;
+	width: 24vw;
+	margin-left: auto;
+}
+.col1, input{
+	width: 10vw;
+	text-align: center;
+}
+.col2{
+	width: 52vw;
+	text-align: center;
+}
+.col3{
+	width: 14vw;
+	text-align: right;
+}
+.col4{
+	width: 14vw;
+	text-align: right;
+}
